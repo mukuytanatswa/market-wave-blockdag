@@ -5,14 +5,18 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  server: {
-    host: "::",
-    port: 8080,
-  },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+    // Use a repo-relative base when building for production so GitHub Pages
+    // serves assets from the correct path. Replace `market-wave-blockdag`
+    // with your repo name if you rename the repo.
+    base: mode === "development" ? "/" : "/market-wave-blockdag/",
+    server: {
+        host: "::",
+        port: 8080,
     },
-  },
+    plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "./src"),
+        },
+    },
 }));

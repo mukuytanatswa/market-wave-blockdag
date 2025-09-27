@@ -66,9 +66,9 @@ npm run dev
 
 ### Getting API Keys
 
-1. **Alpha Vantage** (Free): https://www.alphavantage.co/support/#api-key
-2. **CoinGecko** (Free): https://www.coingecko.com/en/api
-3. **Metals API** (Free): https://metals-api.com/
+1. **Alpha Vantage** (Free): <https://www.alphavantage.co/support/#api-key>
+2. **CoinGecko** (Free): <https://www.coingecko.com/en/api>
+3. **Metals API** (Free): <https://metals-api.com/>
 
 ### GitHub Secrets (for deployment)
 
@@ -101,18 +101,21 @@ If you're deploying to GitHub Pages, Vercel, or Netlify, add these as environmen
 ## Features
 
 ### Real-time Data
+
 - Live cryptocurrency prices from CoinGecko
 - Stock market data from Alpha Vantage
 - Forex exchange rates
 - Commodity prices
 
 ### AI Predictions
+
 - Technical analysis using RSI, moving averages, and volatility
 - Bullish/bearish trend predictions
 - Confidence scoring
 - Support and resistance levels
 
 ### Interactive Charts
+
 - Historical price data
 - Seamless prediction overlays
 - Color-coded trend indicators
@@ -136,3 +139,23 @@ If you encounter any issues, please open an issue on GitHub.
 ---
 
 **Note**: This app is for educational and informational purposes only. Always do your own research before making investment decisions.
+
+## Deployment (GitHub Pages)
+
+This project is configured to deploy to GitHub Pages using the `gh-pages` package. The build uses a repo-relative base so assets load correctly from GitHub Pages.
+
+Quick steps:
+
+1. Ensure this repo is pushed to GitHub under the name `market-wave-blockdag` (or update the `base` in `vite.config.ts` to match your repo name).
+2. Install deps and run the deploy script:
+
+```bash
+npm install
+npm run deploy
+```
+
+After the deploy completes, your site will be available at:
+
+https://<your-github-username>.github.io/market-wave-blockdag/
+
+Replace `<your-github-username>` with your GitHub username or organization. You can also view the GitHub Pages URL on your repository's Settings → Pages page after deployment.
